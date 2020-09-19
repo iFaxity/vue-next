@@ -65,6 +65,14 @@ class RefImpl<T> {
       trigger(toRaw(this), TriggerOpTypes.SET, 'value', newVal)
     }
   }
+
+  toString() {
+    return '' + this.value
+  }
+
+  valueOf() {
+    return this.value
+  }
 }
 
 function createRef(rawValue: unknown, shallow = false) {
